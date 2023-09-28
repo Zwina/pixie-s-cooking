@@ -40,9 +40,9 @@ function NavScroll() {
             <NavDropdown title="Recettes" id="basic-nav-dropdown" href="/voirtout">
             <NavDropdown.Item href="/voirtout">Voir tout</NavDropdown.Item>
             <NavDropdown.Divider />
-              <NavDropdown.Item href={`/voirparcategories/4`}>
+              {/* <NavDropdown.Item href={`/voirparcategories/4`}>
                 Accompagnements
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
               <NavDropdown.Item href={`/voirparcategories/3`}>
                 Desserts
               </NavDropdown.Item>
@@ -53,7 +53,7 @@ function NavScroll() {
                 Plats
               </NavDropdown.Item>
               <NavDropdown.Item href={`/voirparcategories/5`}>
-                Amuses-Gueules
+                Apéros
               </NavDropdown.Item>
               <NavDropdown.Item href={`/voirparcategories/6`}>
                 Boissons
