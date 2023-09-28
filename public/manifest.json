@@ -1,6 +1,6 @@
 {
-  "short_name": "PIxie's Cooking",
-  "name": "Create React App Sample",
+  "short_name": "Pixie Cooking",
+  "name": "Pixie's Cooking",
   "icons": [
     {
       "src": "rabit-icon.webp",
@@ -9,12 +9,12 @@
     },
     {
       "src": "rabit-icon.webp",
-      "type": "image/png",
+      "type": "image/webp",
       "sizes": "192x192"
     },
     {
       "src": "rabit-icon.webp",
-      "type": "image/png",
+      "type": "image/webp",
       "sizes": "512x512"
     }
   ],
