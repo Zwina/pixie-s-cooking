@@ -21,7 +21,7 @@ function CardRecette(props) {
   }, [userId]);
 
   const LikeRecipe = (id) => {
-    Axios.post(`http://localhost:5000/api/like/${id}`).then((response) => {
+    Axios.post(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/like/${id}`).then((response) => {
       alert("you liked a recipe");
     });
   };

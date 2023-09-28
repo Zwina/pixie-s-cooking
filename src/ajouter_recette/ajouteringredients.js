@@ -24,7 +24,7 @@ function CreateIngredients() {
   const [createdIngredientIcon, setCreatedIngredientIcon] = useState("");
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getrecipe/${id}`).then((data) => {
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipe/${id}`).then((data) => {
       setRecipe({
         id: id,
         libelle: data.data[0].libelle,
@@ -33,7 +33,7 @@ function CreateIngredients() {
   }, []);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getingredientsbyrecipe/${id}`).then(
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getingredientsbyrecipe/${id}`).then(
       (data) => {
         setIngredients(data.data);
       }
@@ -42,13 +42,13 @@ function CreateIngredients() {
   }, [ingredients]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/getingredients").then((data) => {
+    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getingredients").then((data) => {
       setIngredientList(data.data);
     });
   }, [ingredientList]);
 
   const handleSubmit = () => {
-    Axios.post("http://localhost:5000/api/createingredient", {
+    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/createingredient", {
       id_ingredient: selectedIngredient,
       quantite: quantite,
       unite: unite,
@@ -66,7 +66,7 @@ function CreateIngredients() {
   };
 
   const submitIngredient = () => {
-    Axios.post("http://localhost:5000/api/addingredient", {
+    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/addingredient", {
       libelle: createdIngredientLibelle,
       icon: createdIngredientIcon,
     }).then((response) => {

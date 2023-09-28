@@ -44,7 +44,7 @@ function UpdateRecette() {
   }, [userId]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getrecipe/${id}`).then((data) => {
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipe/${id}`).then((data) => {
       setRecipe({
         name: data.data[0].libelle,
         difficulte: data.data[0].difficulte,
@@ -68,26 +68,26 @@ function UpdateRecette() {
   }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/getcategories").then((data) => {
+    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcategories").then((data) => {
       setCategorieList(data.data);
     });
   }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/getthemes").then((data) => {
+    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getthemes").then((data) => {
       setThemeList(data.data);
     });
   }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/getcooking").then((data) => {
+    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcooking").then((data) => {
       setCookingList(data.data);
     });
   }, []);
 
   const submitRecipe = () => {
     console.log(userId, recipe.name, recipe.difficulte, recipe.cout);
-    Axios.post(`http://localhost:5000/api/modifyrecipe/${id}`, {
+    Axios.post(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/modifyrecipe/${id}`, {
       libelle: recipe.name,
       nombre_portion: recipe.nombre_portion,
       type_portion: recipe.type_portion,

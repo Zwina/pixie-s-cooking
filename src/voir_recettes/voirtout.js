@@ -8,7 +8,7 @@ function AllRecipes() {
   const [recipeList, setRecipeList] = useState([]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getallrecipes`).then((data) => {
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getallrecipes`).then((data) => {
       setRecipeList(data.data);
     });
   }, [recipeList]);

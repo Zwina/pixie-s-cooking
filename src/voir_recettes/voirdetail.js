@@ -25,7 +25,7 @@ function RecipeDetails() {
   }, [userId]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getrecipe/${id}`).then((data) => {
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipe/${id}`).then((data) => {
       setRecipe({
         name: data.data[0].libelle,
         difficulte: data.data[0].difficulte,
@@ -50,7 +50,7 @@ function RecipeDetails() {
   }, []);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getingredientsbyrecipe/${id}`).then(
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getingredientsbyrecipe/${id}`).then(
       (data) => {
         setIngredients(data.data);
       }
@@ -59,7 +59,7 @@ function RecipeDetails() {
   }, [id]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getstepsbyrecipe/${id}`).then(
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getstepsbyrecipe/${id}`).then(
       (data) => {
         setSteps(data.data);
       }

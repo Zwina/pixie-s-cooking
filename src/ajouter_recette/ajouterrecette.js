@@ -40,26 +40,26 @@ function CreateRecette() {
   }, [userId]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/getcategories").then((data) => {
+    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcategories").then((data) => {
       setCategorieList(data.data);
     });
   }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/getthemes").then((data) => {
+    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getthemes").then((data) => {
       setThemeList(data.data);
     });
   }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/getcooking").then((data) => {
+    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcooking").then((data) => {
       setCookingList(data.data);
     });
   }, []);
 
   const submitRecipe = () => {
     console.log(libelle, commentaire, userId);
-    Axios.post("http://localhost:5000/api/createrecipe", {
+    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/createrecipe", {
       libelle: libelle,
       nombre_portion: nombre_portion,
       type_portion: type_portion,

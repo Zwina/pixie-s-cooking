@@ -31,7 +31,7 @@ function MyRecipes() {
 
   useEffect(() => {
     if (decodedUserId) {
-      Axios.get(`http://localhost:5000/api/getmyrecipes/${decodedUserId}`).then(
+      Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getmyrecipes/${decodedUserId}`).then(
         (data) => {
             setRecipeList(data.data);
             console.log(recipeList)

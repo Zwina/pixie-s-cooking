@@ -11,7 +11,7 @@ function RecipesByCategories() {
   const [categorie, setCategorie] = useState({});
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getrecipesbycategorie/${id}`).then(
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipesbycategorie/${id}`).then(
       (data) => {
         setRecipeList(data.data);
         console.log(recipeList)
@@ -20,7 +20,7 @@ function RecipesByCategories() {
   }, []);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/api/getcategorie/${id}`).then(
+    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcategorie/${id}`).then(
       (data) => {
         setCategorie({
           name: data.data[0].libelle

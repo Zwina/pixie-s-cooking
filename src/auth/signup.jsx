@@ -37,7 +37,7 @@ const Signup = (props) => {
       try {
         const response = await fetch(
           //   process.env.REACT_APP_BACKEND_URL + `/users/signup`, {
-          "http://localhost:5000/api/signup",
+          "https://kind-tan-woodpecker-gear.cyclic.cloud/api/signup",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
