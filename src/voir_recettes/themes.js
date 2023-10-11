@@ -39,7 +39,7 @@ function Themes() {
                 className="mb-4 d-flex justify-content-center"
               >
                 <Link
-                  to={`/voirparthemes/${val.id}`}
+                  to={`/voirpartheme/${val.id}`}
                   style={{ textDecoration: "none" }}
                 >
                   <Card bg="dark" text="light" style={{ width: "200px" }}>
