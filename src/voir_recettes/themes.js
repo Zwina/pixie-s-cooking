@@ -11,7 +11,7 @@ function Themes() {
   const [themeList, setThemeList] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getthemes`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getthemes`).then((data) => {
       setThemeList(data.data);
     });
   }, []);

@@ -14,14 +14,14 @@ function MainPage() {
   const [recipeTopList, setRecipeTopList] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrandomrecipes`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getrandomrecipes`).then((data) => {
       setRecipeList(data.data);
       // console.log(recipeList);
     });
   }, []);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/gettoprecipes`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/gettoprecipes`).then((data) => {
       setRecipeTopList(data.data);
       console.log(recipeTopList);
     });

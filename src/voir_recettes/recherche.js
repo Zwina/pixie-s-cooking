@@ -11,7 +11,7 @@ function SearchRecipe() {
 //   console.log(searchTerm);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/search/${searchTerm}`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/search/${searchTerm}`).then((data) => {
       setRecipeList(data.data);
       console.log(recipeList);
     });

@@ -24,7 +24,7 @@ function UpdateEtapes() {
   const [stepComments, setStepComments] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipe/${id}`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getrecipe/${id}`).then((data) => {
       setRecipe({
         id: id,
         libelle: data.data[0].libelle,
@@ -33,7 +33,7 @@ function UpdateEtapes() {
   }, []);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getstepsbyrecipe/${id}`).then(
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getstepsbyrecipe/${id}`).then(
       (data) => {
         setSteps(data.data);
 
@@ -56,7 +56,7 @@ function UpdateEtapes() {
   }, [steps]);
 
   const handleSubmit = () => {
-    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/createsteps", {
+    Axios.post("https://ill-puce-cricket-cape.cyclic.app/api/createsteps", {
       libelle: libelle,
       commentaire: commentaire,
       photo: photo,
@@ -95,7 +95,7 @@ function UpdateEtapes() {
     });
 
     console.log("updatedStepNumbers", updatedStepNumbers);
-    Axios.post(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/deleteAndUpdateStep/${id}`, {
+    Axios.post(`https://ill-puce-cricket-cape.cyclic.app/api/deleteAndUpdateStep/${id}`, {
       updatedStepNumbers,
     })
       .then((response) => {

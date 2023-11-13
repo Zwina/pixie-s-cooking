@@ -27,7 +27,7 @@ function UpdateIngredients() {
   const [createdIngredientIcon, setCreatedIngredientIcon] = useState("");
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipe/${id}`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getrecipe/${id}`).then((data) => {
       setRecipe({
         id: id,
         libelle: data.data[0].libelle,
@@ -36,7 +36,7 @@ function UpdateIngredients() {
   }, []);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getingredientsbyrecipe/${id}`).then(
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getingredientsbyrecipe/${id}`).then(
       (data) => {
         setIngredients(data.data);
       }
@@ -45,13 +45,13 @@ function UpdateIngredients() {
   }, [ingredients]);
 
   useEffect(() => {
-    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getingredients").then((data) => {
+    Axios.get("https://ill-puce-cricket-cape.cyclic.app/api/getingredients").then((data) => {
       setIngredientList(data.data);
     });
   }, [ingredientList]);
 
   const handleSubmit = () => {
-    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/createingredient", {
+    Axios.post("https://ill-puce-cricket-cape.cyclic.app/api/createingredient", {
       id_ingredient: selectedIngredient,
       quantite: quantite,
       unite: unite,
@@ -69,7 +69,7 @@ function UpdateIngredients() {
   };
 
   const submitIngredient = () => {
-    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/addingredient", {
+    Axios.post("https://ill-puce-cricket-cape.cyclic.app/api/addingredient", {
       libelle: createdIngredientLibelle,
       icon: createdIngredientIcon,
     }).then((response) => {
@@ -81,7 +81,7 @@ function UpdateIngredients() {
   };
 
   const deleteIngredient = (id) => {
-    Axios.delete(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/deleteingredient/${id}`).then(
+    Axios.delete(`https://ill-puce-cricket-cape.cyclic.app/api/deleteingredient/${id}`).then(
       (response) => {
         alert("you deleted an ingredient");
       }

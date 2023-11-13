@@ -31,7 +31,7 @@ function MyRecipes() {
 
   useEffect(() => {
     if (decodedUserId) {
-      Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getmyrecipes/${decodedUserId}`).then(
+      Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getmyrecipes/${decodedUserId}`).then(
         (data) => {
             setRecipeList(data.data);
             console.log(recipeList)

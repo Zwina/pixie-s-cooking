@@ -40,7 +40,7 @@ function Profil(props) {
 
   useEffect(() => {
     if (userId) {
-      Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getuserbyid/${userId}`).then(
+      Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getuserbyid/${userId}`).then(
         (data) => {
           setUser({
             email: data.data[0].email,
@@ -53,7 +53,7 @@ function Profil(props) {
   }, [userId]);
 
   const submitUser = () => {
-    Axios.post(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/modifyuser/${userId}`, {
+    Axios.post(`https://ill-puce-cricket-cape.cyclic.app/api/modifyuser/${userId}`, {
       email: user.email,
       pseudo: user.pseudo,
       oldPassword: user.oldPassword,

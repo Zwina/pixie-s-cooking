@@ -21,7 +21,7 @@ function CreateEtapes() {
   const [photo, setPhoto] = useState("");
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipe/${id}`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getrecipe/${id}`).then((data) => {
       setRecipe({
         id: id,
         libelle: data.data[0].libelle,
@@ -30,7 +30,7 @@ function CreateEtapes() {
   }, []);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getstepsbyrecipe/${id}`).then(
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getstepsbyrecipe/${id}`).then(
       (data) => {
         setSteps(data.data);
         const maxLibelle = Math.max(...data.data.map((step) => step.numeroEtape));
@@ -43,7 +43,7 @@ function CreateEtapes() {
   }, [steps]);
 
   const handleSubmit = () => {
-    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/createsteps", {
+    Axios.post("https://ill-puce-cricket-cape.cyclic.app/api/createsteps", {
       libelle: libelle,
       commentaire: commentaire,
       photo: photo,

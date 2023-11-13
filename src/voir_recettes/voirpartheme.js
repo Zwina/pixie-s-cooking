@@ -11,7 +11,7 @@ function RecipesByTheme() {
   const [categorie, setCategorie] = useState({});
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getrecipesbytheme/${id}`).then(
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getrecipesbytheme/${id}`).then(
       (data) => {
         setRecipeList(data.data);
         console.log(recipeList)
@@ -20,7 +20,7 @@ function RecipesByTheme() {
   }, []);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/gettheme/${id}`).then(
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/gettheme/${id}`).then(
       (data) => {
         setCategorie({
           name: data.data[0].libelle

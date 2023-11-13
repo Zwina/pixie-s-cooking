@@ -8,7 +8,7 @@ function AllRecipes() {
   const [recipeList, setRecipeList] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getallrecipes`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getallrecipes`).then((data) => {
       setRecipeList(data.data);
     });
   }, []);

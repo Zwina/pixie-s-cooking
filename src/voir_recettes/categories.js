@@ -14,7 +14,7 @@ function Categories() {
   const [categorieList, setCategorieList] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcategories`).then((data) => {
+    Axios.get(`https://ill-puce-cricket-cape.cyclic.app/api/getcategories`).then((data) => {
       setCategorieList(data.data);
     });
   }, []);

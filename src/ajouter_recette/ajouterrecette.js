@@ -40,26 +40,26 @@ function CreateRecette() {
   }, [userId]);
 
   useEffect(() => {
-    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcategories").then((data) => {
+    Axios.get("https://ill-puce-cricket-cape.cyclic.app/api/getcategories").then((data) => {
       setCategorieList(data.data);
     });
   }, []);
 
   useEffect(() => {
-    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getthemes").then((data) => {
+    Axios.get("https://ill-puce-cricket-cape.cyclic.app/api/getthemes").then((data) => {
       setThemeList(data.data);
     });
   }, []);
 
   useEffect(() => {
-    Axios.get("https://kind-tan-woodpecker-gear.cyclic.cloud/api/getcooking").then((data) => {
+    Axios.get("https://ill-puce-cricket-cape.cyclic.app/api/getcooking").then((data) => {
       setCookingList(data.data);
     });
   }, []);
 
   const submitRecipe = () => {
     console.log(libelle, commentaire, userId);
-    Axios.post("https://kind-tan-woodpecker-gear.cyclic.cloud/api/createrecipe", {
+    Axios.post("https://ill-puce-cricket-cape.cyclic.app/api/createrecipe", {
       libelle: libelle,
       nombre_portion: nombre_portion,
       type_portion: type_portion,
