@@ -11,7 +11,7 @@ function AllRecipes() {
     Axios.get(`https://kind-tan-woodpecker-gear.cyclic.cloud/api/getallrecipes`).then((data) => {
       setRecipeList(data.data);
     });
-  }, [recipeList]);
+  }, []);
 
   return (
     <>
